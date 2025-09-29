@@ -1,0 +1,273 @@
+{
+    "@@locale": "id",
+    "appTitle": "Aplikasi Hiking",
+    "homeScreenTitle": "Beranda",
+    "infoScreenTitle": "Informasi",
+    "gpxPlanningScreenTitle": "Perencanaan Peta GPX",
+    "gpxMergeScreenTitle": "Gabungkan GPX",
+    "routeEstimationScreenTitle": "Estimasi Rute",
+    "equipmentChecklistScreenTitle": "Daftar Periksa Peralatan",
+    "gpxLibraryScreenTitle": "Perpustakaan GPX",
+    "authScreenTitle": "Manajemen Akun",
+    "socialFeedTitle": "Feed Sosial",
+    "trackingFeatureTitle": "Perekaman Jejak",
+    "trackingStoppedMessage": "Pelacakan dihentikan.",
+    "startTrackingButton": "Mulai Pelacakan",
+    "pauseTrackingButton": "Jeda",
+    "stopTrackingButton": "Hentikan",
+    "resumeTrackingButton": "Lanjutkan",
+    "defaultTrackName": "Jejak Saya",
+    "trackNameLabel": "Nama Jejak",
+    "saveTrackButton": "Simpan Jejak",
+    "startNewTrackButton": "Mulai Jejak Baru",
+    "home_startPlanning": "Mulai Merencanakan Rute Baru",
+
+    "checklist_personalGear": "Peralatan Pribadi",
+    "checklist_groupGear": "Peralatan Grup",
+    "checklist_baseGear": "Peralatan Dasar",
+    "checklist_technicalGear": "Peralatan Teknis/Salju",
+    "checklist_otherGear": "Barang Lainnya",
+    "checklist_totalWeight": "Berat Total",
+    "checklist_quantity": "Jml",
+    "checklist_weightGrams": "Berat(g)",
+    "checklist_snowEssential": "Penting Musim Salju",
+
+    "estimation_routeQixing": "PP Puncak Utama Gn. Qixing",
+    "estimation_routeTianmu": "Jalur Kuno Tianmu",
+    "estimation_routeYushan": "Puncak Utama Gn. Yushan",
+    "estimation_routeHehuan": "Puncak Utara Gn. Hehuan",
+    "estimation_yourTimeHint": "Waktu Anda",
+    "estimation_minutesUnit": "menit",
+    "estimation_breathingLevelQuestion": "Tingkat sesak napas saat naik dari lantai 1 ke 5 dengan kecepatan normal?",
+    "estimation_breathingLevel1": "1 - Tidak terasa",
+    "estimation_breathingLevel3": "3 - Lelah tapi tidak sesak",
+    "estimation_breathingLevel5": "5 - Sangat sesak",
+    "estimation_inactivityLabel": "Bulan tidak aktif (mis: 3)",
+    "estimation_monthsUnit": "bulan",
+    "estimation_calculateButton": "Hitung & Simpan Koefisien Kecepatan Saya",
+    "estimation_resultTitle": "Koefisien Kecepatan Anda sekitar",
+    "estimation_resultDescription": "(Ini adalah pengali relatif terhadap waktu peta standar. Cth: 1.0 sama dengan standar, 0.8 lebih cepat, 1.2 lebih lambat.)",
+    "estimation_resultWarning": "Pengingat: Jika Anda tidak berolahraga atau mendaki selama sebulan, disarankan untuk mengalikan perkiraan waktu dengan 1.1. Selama tiga bulan, kalikan dengan 1.1 pangkat tiga.",
+
+    "merge_selectButton": "Pilih File GPX (Maks 3)",
+    "merge_mergeButton": "Gabungkan File GPX",
+    "merge_selectedFilesTitle": "File yang Dipilih:",
+    "merge_noFilesSelected": "Belum ada file yang dipilih.",
+    "merge_successDialogTitle": "Penggabungan Berhasil",
+    "merge_successDialogContent": "File GPX yang digabungkan telah disimpan ke perpustakaan Anda.\n\nApakah Anda ingin pergi ke halaman Perencanaan GPX untuk pengeditan lebih lanjut?",
+    "merge_stayHereButton": "Tetap di Sini",
+    "merge_goToPlanningButton": "Pergi ke Perencanaan",
+    "merge_errorTooManyFiles": "Maksimal 3 file yang dapat dipilih.",
+    "merge_errorTooFewFiles": "Pilih setidaknya 2 file untuk digabungkan.",
+    "merge_errorFileTooLarge": "File \"{fileName}\" terlalu besar (batas 1000KB).",
+    "@merge_errorFileTooLarge": {
+        "placeholders": {
+            "fileName": {
+                "type": "String"
+            }
+        }
+    },
+    "merge_errorNotGpx": "File \"{fileName}\" bukan file GPX.",
+    "@merge_errorNotGpx": {
+        "placeholders": {
+            "fileName": {
+                "type": "String"
+            }
+        }
+    },
+    "merge_errorGeneric": "Terjadi kesalahan: {error}",
+    "@merge_errorGeneric": {
+        "placeholders": {
+            "error": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "retry": "Coba lagi",
+    "cancel": "Batal",
+    "confirm": "Konfirmasi",
+    "save": "Simpan",
+    "delete": "Hapus",
+    "edit": "Edit",
+    "search": "Cari",
+    "filter": "Filter",
+    "sort": "Urutkan",
+    "share": "Bagikan",
+    "export": "Ekspor",
+    "import": "Impor",
+    "upload": "Unggah",
+    "download": "Unduh",
+    "settings": "Pengaturan",
+    "profile": "Profil",
+    "logout": "Keluar",
+    "login": "Masuk",
+    "register": "Daftar",
+    "welcome": "Selamat Datang",
+    "back": "Kembali",
+    "next": "Berikutnya",
+    "previous": "Sebelumnya",
+    "done": "Selesai",
+    "close": "Tutup",
+    "open": "Buka",
+    "yes": "Ya",
+    "no": "Tidak",
+    "ok": "OK",
+    
+    "selectFile": "Pilih File",
+    "fileSelected": "{count} file dipilih",
+    "@fileSelected": {
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    },
+    "noFileSelected": "Tidak ada file yang dipilih",
+    "fileUploadSuccess": "File berhasil diunggah",
+    "fileUploadError": "Gagal mengunggah file",
+    "fileSizeLimit": "Batas ukuran file: {size}",
+    "@fileSizeLimit": {
+        "placeholders": {
+            "size": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "distance": "Jarak",
+    "elevation": "Ketinggian",
+    "elevationGain": "Kenaikan Ketinggian",
+    "elevationLoss": "Penurunan Ketinggian",
+    "duration": "Durasi",
+    "speed": "Kecepatan",
+    "pace": "Laju",
+    "difficulty": "Tingkat Kesulitan",
+    "easy": "Mudah",
+    "moderate": "Sedang",
+    "hard": "Sulit",
+    "expert": "Ahli",
+    
+    "startPoint": "Titik Awal",
+    "endPoint": "Titik Akhir",
+    "waypoint": "Titik Jalan",
+    "currentLocation": "Lokasi Saat Ini",
+    "destination": "Tujuan",
+    "route": "Rute",
+    "track": "Jejak",
+    "map": "Peta",
+    "satellite": "Satelit",
+    "terrain": "Medan",
+    "hybrid": "Hibrida",
+    
+    "weather": "Cuaca",
+    "temperature": "Suhu",
+    "humidity": "Kelembaban",
+    "windSpeed": "Kecepatan Angin",
+    "precipitation": "Curah Hujan",
+    
+    "equipment": "Peralatan",
+    "required": "Wajib",
+    "optional": "Opsional",
+    "quantity": "Jumlah",
+    "weight": "Berat",
+    "totalWeight": "Berat Total",
+    "checklist": "Daftar Periksa",
+    "completed": "Selesai",
+    "incomplete": "Tidak Lengkap",
+    
+    "mergeGpx": "Gabungkan GPX",
+    "selectFilesToMerge": "Pilih file untuk digabungkan",
+    "mergeSuccess": "Penggabungan berhasil",
+    "mergeError": "Penggabungan gagal",
+    "processing": "Memproses...",
+    
+    "aiSuggestion": "Saran AI",
+    "optimizeRoute": "Optimalkan Rute",
+    "shortestPath": "Jalur Terpendek",
+    "leastElevation": "Ketinggian Terendah",
+    "safestRoute": "Rute Teraman",
+    
+    "favorites": "Favorit",
+    "addToFavorites": "Tambahkan ke Favorit",
+    "removeFromFavorites": "Hapus dari Favorit",
+    "favoritesLimit": "Batas favorit adalah 4, harap hapus satu untuk menambahkan yang lain",
+    
+    "announcement": "Pengumuman",
+    "news": "Berita",
+    "notification": "Notifikasi",
+    "message": "Pesan",
+    
+    "networkError": "Kesalahan koneksi jaringan",
+    "serverError": "Kesalahan server",
+    "unknownError": "Kesalahan tidak diketahui",
+    "tryAgainLater": "Silakan coba lagi nanti",
+    
+    "privacyPolicy": "Kebijakan Privasi",
+    "termsOfService": "Ketentuan Layanan",
+    "about": "Tentang",
+    "version": "Versi",
+    "contactUs": "Hubungi Kami",
+    "feedback": "Umpan Balik",
+    "reportBug": "Laporkan Bug",
+    
+    "lastUpdated": "Terakhir Diperbarui",
+    "createdAt": "Dibuat Pada",
+    "modifiedAt": "Diubah Pada",
+    "syncData": "Sinkronkan Data",
+    "offlineMode": "Mode Offline",
+    "onlineMode": "Mode Online",
+    
+    "tutorial": "Tutorial",
+    "help": "Bantuan",
+    "faq": "FAQ",
+    "guide": "Panduan Pengguna",
+    "tips": "Tips",
+    
+    "shareWith": "Bagikan dengan",
+    "copyLink": "Salin Tautan",
+    "qrCode": "Kode QR",
+    "scanQrCode": "Pindai Kode QR",
+    
+    "year": "Tahun",
+    "month": "Bulan",
+    "day": "Hari",
+    "hour": "Jam",
+    "minute": "Menit",
+    "second": "Detik",
+    "today": "Hari Ini",
+    "yesterday": "Kemarin",
+    "tomorrow": "Besok",
+    "thisWeek": "Minggu Ini",
+    "lastWeek": "Minggu Lalu",
+    "thisMonth": "Bulan Ini",
+    "lastMonth": "Bulan Lalu",
+    
+    "male": "Pria",
+    "female": "Wanita",
+    "other": "Lainnya",
+    "age": "Usia",
+    "height": "Tinggi",
+    "weight_unit": "Berat",
+    "experience": "Pengalaman",
+    "beginner": "Pemula",
+    "intermediate": "Menengah",
+    "advanced": "Mahir",
+    "professional": "Profesional",
+    
+    "achievement": "Pencapaian",
+    "badge": "Lencana",
+    "level": "Tingkat",
+    "points": "Poin",
+    "ranking": "Peringkat",
+    "leaderboard": "Papan Peringkat",
+    "statistics": "Statistik",
+    "progress": "Kemajuan",
+    
+    "connectionLost": "Koneksi Terputus",
+    "reconnecting": "Menyambungkan kembali...",
+    "connected": "Terhubung",
+    "disconnected": "Terputus"
+}

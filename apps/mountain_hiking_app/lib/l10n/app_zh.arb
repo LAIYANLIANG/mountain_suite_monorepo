@@ -1,0 +1,278 @@
+{
+    "@@locale": "zh",
+    "appTitle": "登山應用程式",
+    "@appTitle": {
+        "description": "應用程式標題"
+    },
+    
+    "homeScreenTitle": "首頁",
+    "infoScreenTitle": "參考資訊",
+    "gpxPlanningScreenTitle": "GPX 地圖規劃",
+    "gpxMergeScreenTitle": "GPX 整併功能",
+    "routeEstimationScreenTitle": "路程評估",
+        "equipmentChecklistScreenTitle": "裝備盤點表",
+    "gpxLibraryScreenTitle": "GPX 地圖庫",
+    "authScreenTitle": "帳戶管理",
+    "socialFeedTitle": "社群動態",
+    
+    "trackingFeatureTitle": "記錄你的行走軌跡",
+    "trackingStoppedMessage": "軌跡已停止。",
+    "startTrackingButton": "開始記錄",
+    "pauseTrackingButton": "暫停記錄",
+    "stopTrackingButton": "停止記錄",
+    "resumeTrackingButton": "繼續記錄",
+    "defaultTrackName": "我的軌跡",
+    "trackNameLabel": "軌跡名稱",
+    "saveTrackButton": "儲存軌跡",
+    "startNewTrackButton": "開始新軌跡",
+    "home_startPlanning": "開始規劃新路線",
+
+    "checklist_personalGear": "個人裝備",
+    "checklist_groupGear": "團體裝備",
+    "checklist_baseGear": "基本裝備",
+    "checklist_technicalGear": "技術/雪季器材",
+    "checklist_otherGear": "其他物品",
+    "checklist_totalWeight": "總重量",
+    "checklist_quantity": "數量",
+    "checklist_weightGrams": "重量(g)",
+    "checklist_snowEssential": "雪季必備",
+
+    "estimation_routeQixing": "陽明山七星山主峰來回",
+    "estimation_routeTianmu": "天母古道",
+    "estimation_routeYushan": "玉山主峰",
+    "estimation_routeHehuan": "合歡北峰",
+    "estimation_yourTimeHint": "您的時間",
+    "estimation_minutesUnit": "分鐘",
+    "estimation_breathingLevelQuestion": "從一樓依自身正常速度爬到五樓的喘度？",
+    "estimation_breathingLevel1": "1 - 沒感覺",
+    "estimation_breathingLevel3": "3 - 會累但不喘",
+    "estimation_breathingLevel5": "5 - 很喘",
+    "estimation_inactivityLabel": "不活動月數 (例如：3)",
+    "estimation_monthsUnit": "個月",
+    "estimation_calculateButton": "計算並儲存我的腳程係數",
+    "estimation_resultTitle": "您的腳程係數約為",
+    "estimation_resultDescription": "(此為相對於上河時間的倍率。例如 1.0 代表與上河時間相同，0.8 代表您走得比上河時間快，1.2 代表您走得比上河時間慢。)",
+    "estimation_resultWarning": "提醒：如果一個月內未運動或登山，建議估算時間再加乘 1.1。三個月沒運動則乘以 1.1 的三次方。",
+
+    "merge_selectButton": "選擇 GPX 檔案 (最多3個)",
+    "merge_mergeButton": "合併 GPX 檔案",
+    "merge_selectedFilesTitle": "已選檔案:",
+    "merge_noFilesSelected": "尚未選擇任何檔案。",
+    "merge_successDialogTitle": "合併成功",
+    "merge_successDialogContent": "合併後的 GPX 檔案已儲存至您的地圖庫.\n\n您是否要前往「GPX 地圖規劃」頁面進一步編輯？",
+    "merge_stayHereButton": "留在本頁",
+    "merge_goToPlanningButton": "前往規劃",
+    "merge_errorTooManyFiles": "最多只能選擇 3 個檔案。",
+    "merge_errorTooFewFiles": "請至少選擇 2 個檔案進行合併。",
+    "merge_errorFileTooLarge": "檔案 \"{fileName}\" 過大，超過 1000KB 的限制。",
+    "@merge_errorFileTooLarge": {
+        "placeholders": {
+            "fileName": {
+                "type": "String"
+            }
+        }
+    },
+    "merge_errorNotGpx": "檔案 \"{fileName}\" 不是 GPX 檔案。",
+    "@merge_errorNotGpx": {
+        "placeholders": {
+            "fileName": {
+                "type": "String"
+            }
+        }
+    },
+    "merge_errorGeneric": "發生錯誤: {error}",
+    "@merge_errorGeneric": {
+        "placeholders": {
+            "error": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "loading": "載入中...",
+    "error": "發生錯誤",
+    "retry": "重試",
+    "cancel": "取消",
+    "confirm": "確認",
+    "save": "儲存",
+    "delete": "刪除",
+    "edit": "編輯",
+    "search": "搜尋",
+    "filter": "篩選",
+    "sort": "排序",
+    "share": "分享",
+    "export": "匯出",
+    "import": "匯入",
+    "upload": "上傳",
+    "download": "下載",
+    "settings": "設定",
+    "profile": "個人檔案",
+    "logout": "登出",
+    "login": "登入",
+    "register": "註冊",
+    "welcome": "歡迎",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "done": "完成",
+    "close": "關閉",
+    "open": "開啟",
+    "yes": "是",
+    "no": "否",
+    "ok": "確定",
+    
+    "selectFile": "選擇檔案",
+    "fileSelected": "已選擇 {count} 個檔案",
+    "@fileSelected": {
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    },
+    "noFileSelected": "未選擇檔案",
+    "fileUploadSuccess": "檔案上傳成功",
+    "fileUploadError": "檔案上傳失敗",
+    "fileSizeLimit": "檔案大小限制：{size}",
+    "@fileSizeLimit": {
+        "placeholders": {
+            "size": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "distance": "距離",
+    "elevation": "海拔",
+    "elevationGain": "累積爬升",
+    "elevationLoss": "累積下降",
+    "duration": "時間",
+    "speed": "速度",
+    "pace": "配速",
+    "difficulty": "難度",
+    "easy": "簡單",
+    "moderate": "中等",
+    "hard": "困難",
+    "expert": "專家",
+    
+    "startPoint": "起點",
+    "endPoint": "終點",
+    "waypoint": "航點",
+    "currentLocation": "目前位置",
+    "destination": "目的地",
+    "route": "路線",
+    "track": "軌跡",
+    "map": "地圖",
+    "satellite": "衛星",
+    "terrain": "地形",
+    "hybrid": "混合",
+    
+    "weather": "天氣",
+    "temperature": "溫度",
+    "humidity": "濕度",
+    "windSpeed": "風速",
+    "precipitation": "降雨機率",
+    
+    "equipment": "裝備",
+    "required": "必備",
+    "optional": "選備",
+    "quantity": "數量",
+    "weight": "重量",
+    "totalWeight": "總重量",
+    "checklist": "檢查清單",
+    "completed": "已完成",
+    "incomplete": "未完成",
+    
+    "mergeGpx": "合併 GPX",
+    "selectFilesToMerge": "選擇要合併的檔案",
+    "mergeSuccess": "合併成功",
+    "mergeError": "合併失敗",
+    "processing": "處理中...",
+    
+    "aiSuggestion": "AI 建議",
+    "optimizeRoute": "優化路線",
+    "shortestPath": "最短路徑",
+    "leastElevation": "最少爬升",
+    "safestRoute": "最安全路線",
+    
+    "favorites": "我的最愛",
+    "addToFavorites": "加入最愛",
+    "removeFromFavorites": "移除最愛",
+    "favoritesLimit": "最愛的上限是4個，請對其中做出斷捨離",
+    
+    "announcement": "官方公告",
+    "news": "最新消息",
+    "notification": "通知",
+    "message": "訊息",
+    
+    "networkError": "網路連線錯誤",
+    "serverError": "伺服器錯誤",
+    "unknownError": "未知錯誤",
+    "tryAgainLater": "請稍後再試",
+    
+    "privacyPolicy": "隱私政策",
+    "termsOfService": "服務條款",
+    "about": "關於",
+    "version": "版本",
+    "contactUs": "聯絡我們",
+    "feedback": "意見回饋",
+    "reportBug": "回報問題",
+    
+    "lastUpdated": "最後更新",
+    "createdAt": "建立時間",
+    "modifiedAt": "修改時間",
+    "syncData": "同步資料",
+    "offlineMode": "離線模式",
+    "onlineMode": "線上模式",
+    
+    "tutorial": "教學",
+    "help": "說明",
+    "faq": "常見問題",
+    "guide": "使用指南",
+    "tips": "小提示",
+    
+    "shareWith": "分享給",
+    "copyLink": "複製連結",
+    "qrCode": "QR Code",
+    "scanQrCode": "掃描 QR Code",
+    
+    "year": "年",
+    "month": "月",
+    "day": "日",
+    "hour": "小時",
+    "minute": "分鐘",
+    "second": "秒",
+    "today": "今天",
+    "yesterday": "昨天",
+    "tomorrow": "明天",
+    "thisWeek": "本週",
+    "lastWeek": "上週",
+    "thisMonth": "本月",
+    "lastMonth": "上月",
+    
+    "male": "男性",
+    "female": "女性",
+    "other": "其他",
+    "age": "年齡",
+    "height": "身高",
+    "weight_unit": "體重",
+    "experience": "經驗",
+    "beginner": "初學者",
+    "intermediate": "中級",
+    "advanced": "進階",
+    "professional": "專業",
+    
+    "achievement": "成就",
+    "badge": "徽章",
+    "level": "等級",
+    "points": "點數",
+    "ranking": "排名",
+    "leaderboard": "排行榜",
+    "statistics": "統計",
+    "progress": "進度",
+    
+    "connectionLost": "連線中斷",
+    "reconnecting": "重新連線中...",
+    "connected": "已連線",
+    "disconnected": "已斷線"
+}

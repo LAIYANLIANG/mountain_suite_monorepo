@@ -1,0 +1,17 @@
+# This file configures the Flutter localization tool (gen-l10n).
+
+# Directory where the .arb files are located.
+arb-dir: lib/l10n
+
+# The template .arb file that all other .arb files should be based on.
+# It defines the keys that must be present in all other language files.
+template-arb-file: app_zh.arb
+
+# The name of the generated Dart file that will contain the localizations.
+output-localization-file: app_localizations.dart
+
+# The directory where the generated localization files will be placed.
+output-dir: lib/generated
+
+# The name of the class that will be generated to hold the localizations.
+output-class: AppLocalizations

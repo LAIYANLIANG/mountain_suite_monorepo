@@ -1,0 +1,278 @@
+{
+    "@@locale": "en",
+    "appTitle": "Hiking App",
+    "@appTitle": {
+        "description": "Application title"
+    },
+    
+    "homeScreenTitle": "Home",
+    "infoScreenTitle": "Information",
+    "gpxPlanningScreenTitle": "GPX Map Planning",
+    "gpxMergeScreenTitle": "GPX Merge",
+    "routeEstimationScreenTitle": "Route Estimation",
+    "equipmentChecklistScreenTitle": "Equipment Checklist",
+    "gpxLibraryScreenTitle": "GPX Library",
+    "authScreenTitle": "Account Management",
+    "socialFeedTitle": "Social Feed",
+    
+    "trackingFeatureTitle": "Track Recording",
+    "trackingStoppedMessage": "Tracking stopped.",
+    "startTrackingButton": "Start Tracking",
+    "pauseTrackingButton": "Pause Tracking",
+    "stopTrackingButton": "Stop Tracking",
+    "resumeTrackingButton": "Resume Tracking",
+    "defaultTrackName": "My Track",
+    "trackNameLabel": "Track Name",
+    "saveTrackButton": "Save Track",
+    "startNewTrackButton": "Start New Track",
+    "home_startPlanning": "Start Planning New Route",
+
+    "checklist_personalGear": "Personal Gear",
+    "checklist_groupGear": "Group Gear",
+    "checklist_baseGear": "Base Gear",
+    "checklist_technicalGear": "Technical/Snow Gear",
+    "checklist_otherGear": "Other Items",
+    "checklist_totalWeight": "Total Weight",
+    "checklist_quantity": "Qty",
+    "checklist_weightGrams": "Weight(g)",
+    "checklist_snowEssential": "Snow Season Essential",
+
+    "estimation_routeQixing": "Mt. Qixing Main Peak Round Trip",
+    "estimation_routeTianmu": "Tianmu Ancient Trail",
+    "estimation_routeYushan": "Mt. Jade Main Peak",
+    "estimation_routeHehuan": "Mt. Hehuan North Peak",
+    "estimation_yourTimeHint": "Your Time",
+    "estimation_minutesUnit": "minutes",
+    "estimation_breathingLevelQuestion": "Breathlessness level climbing from 1st to 5th floor at normal speed?",
+    "estimation_breathingLevel1": "1 - No feeling",
+    "estimation_breathingLevel3": "3 - Tired but not breathless",
+    "estimation_breathingLevel5": "5 - Very breathless",
+    "estimation_inactivityLabel": "Months of inactivity (e.g., 3)",
+    "estimation_monthsUnit": "months",
+    "estimation_calculateButton": "Calculate & Save My Pace Coefficient",
+    "estimation_resultTitle": "Your Pace Coefficient is approximately",
+    "estimation_resultDescription": "(This is a multiplier relative to the standard map time. E.g., 1.0 is same as standard, 0.8 is faster, 1.2 is slower.)",
+    "estimation_resultWarning": "Reminder: If you haven't exercised or hiked for a month, it is recommended to multiply the estimated time by 1.1. For three months, multiply by 1.1 cubed.",
+
+    "merge_selectButton": "Select GPX Files (Max 3)",
+    "merge_mergeButton": "Merge GPX Files",
+    "merge_selectedFilesTitle": "Selected Files:",
+    "merge_noFilesSelected": "No files selected yet.",
+    "merge_successDialogTitle": "Merge Successful",
+    "merge_successDialogContent": "The merged GPX file has been saved to your library.\n\nWould you like to go to the GPX Planning page for further editing?",
+    "merge_stayHereButton": "Stay Here",
+    "merge_goToPlanningButton": "Go to Planning",
+    "merge_errorTooManyFiles": "A maximum of 3 files can be selected.",
+    "merge_errorTooFewFiles": "Please select at least 2 files to merge.",
+    "merge_errorFileTooLarge": "File \"{fileName}\" is too large (limit 1000KB).",
+    "@merge_errorFileTooLarge": {
+        "placeholders": {
+            "fileName": {
+                "type": "String"
+            }
+        }
+    },
+    "merge_errorNotGpx": "File \"{fileName}\" is not a GPX file.",
+    "@merge_errorNotGpx": {
+        "placeholders": {
+            "fileName": {
+                "type": "String"
+            }
+        }
+    },
+    "merge_errorGeneric": "An error occurred: {error}",
+    "@merge_errorGeneric": {
+        "placeholders": {
+            "error": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "loading": "Loading...",
+    "error": "Error occurred",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "share": "Share",
+    "export": "Export",
+    "import": "Import",
+    "upload": "Upload",
+    "download": "Download",
+    "settings": "Settings",
+    "profile": "Profile",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register",
+    "welcome": "Welcome",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "done": "Done",
+    "close": "Close",
+    "open": "Open",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    
+    "selectFile": "Select File",
+    "fileSelected": "{count} file(s) selected",
+    "@fileSelected": {
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    },
+    "noFileSelected": "No file selected",
+    "fileUploadSuccess": "File uploaded successfully",
+    "fileUploadError": "File upload failed",
+    "fileSizeLimit": "File size limit: {size}",
+    "@fileSizeLimit": {
+        "placeholders": {
+            "size": {
+                "type": "String"
+            }
+        }
+    },
+    
+    "distance": "Distance",
+    "elevation": "Elevation",
+    "elevationGain": "Elevation Gain",
+    "elevationLoss": "Elevation Loss",
+    "duration": "Duration",
+    "speed": "Speed",
+    "pace": "Pace",
+    "difficulty": "Difficulty",
+    "easy": "Easy",
+    "moderate": "Moderate",
+    "hard": "Hard",
+    "expert": "Expert",
+    
+    "startPoint": "Start Point",
+    "endPoint": "End Point",
+    "waypoint": "Waypoint",
+    "currentLocation": "Current Location",
+    "destination": "Destination",
+    "route": "Route",
+    "track": "Track",
+    "map": "Map",
+    "satellite": "Satellite",
+    "terrain": "Terrain",
+    "hybrid": "Hybrid",
+    
+    "weather": "Weather",
+    "temperature": "Temperature",
+    "humidity": "Humidity",
+    "windSpeed": "Wind Speed",
+    "precipitation": "Precipitation",
+    
+    "equipment": "Equipment",
+    "required": "Required",
+    "optional": "Optional",
+    "quantity": "Quantity",
+    "weight": "Weight",
+    "totalWeight": "Total Weight",
+    "checklist": "Checklist",
+    "completed": "Completed",
+    "incomplete": "Incomplete",
+    
+    "mergeGpx": "Merge GPX",
+    "selectFilesToMerge": "Select files to merge",
+    "mergeSuccess": "Merge successful",
+    "mergeError": "Merge failed",
+    "processing": "Processing...",
+    
+    "aiSuggestion": "AI Suggestion",
+    "optimizeRoute": "Optimize Route",
+    "shortestPath": "Shortest Path",
+    "leastElevation": "Least Elevation",
+    "safestRoute": "Safest Route",
+    
+    "favorites": "Favorites",
+    "addToFavorites": "Add to Favorites",
+    "removeFromFavorites": "Remove from Favorites",
+    "favoritesLimit": "Favorites limit is 4, please remove one to add another",
+    
+    "announcement": "Announcement",
+    "news": "News",
+    "notification": "Notification",
+    "message": "Message",
+    
+    "networkError": "Network connection error",
+    "serverError": "Server error",
+    "unknownError": "Unknown error",
+    "tryAgainLater": "Please try again later",
+    
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "about": "About",
+    "version": "Version",
+    "contactUs": "Contact Us",
+    "feedback": "Feedback",
+    "reportBug": "Report Bug",
+    
+    "lastUpdated": "Last Updated",
+    "createdAt": "Created At",
+    "modifiedAt": "Modified At",
+    "syncData": "Sync Data",
+    "offlineMode": "Offline Mode",
+    "onlineMode": "Online Mode",
+    
+    "tutorial": "Tutorial",
+    "help": "Help",
+    "faq": "FAQ",
+    "guide": "User Guide",
+    "tips": "Tips",
+    
+    "shareWith": "Share with",
+    "copyLink": "Copy Link",
+    "qrCode": "QR Code",
+    "scanQrCode": "Scan QR Code",
+    
+    "year": "Year",
+    "month": "Month",
+    "day": "Day",
+    "hour": "Hour",
+    "minute": "Minute",
+    "second": "Second",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "tomorrow": "Tomorrow",
+    "thisWeek": "This Week",
+    "lastWeek": "Last Week",
+    "thisMonth": "This Month",
+    "lastMonth": "Last Month",
+    
+    "male": "Male",
+    "female": "Female",
+    "other": "Other",
+    "age": "Age",
+    "height": "Height",
+    "weight_unit": "Weight",
+    "experience": "Experience",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "professional": "Professional",
+    
+    "achievement": "Achievement",
+    "badge": "Badge",
+    "level": "Level",
+    "points": "Points",
+    "ranking": "Ranking",
+    "leaderboard": "Leaderboard",
+    "statistics": "Statistics",
+    "progress": "Progress",
+    
+    "connectionLost": "Connection Lost",
+    "reconnecting": "Reconnecting...",
+    "connected": "Connected",
+    "disconnected": "Disconnected"
+}

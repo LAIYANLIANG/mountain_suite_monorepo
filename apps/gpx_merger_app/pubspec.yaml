@@ -1,0 +1,47 @@
+name: gpx_merger_app
+description: A simple GPX file merger application
+publish_to: 'none'
+version: 1.0.0+4
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  open_file: ^3.5.10        # 用於開啟檔案
+  share_plus: ^11.0.0 # 用於分享檔案
+  flutter_speed_dial: ^7.0.0 # 浮動按鈕
+  url_launcher: ^6.3.2 # 開啟網頁連結
+  intl: ^0.20.2
+
+  # ================== 關鍵檢查點 ==================
+  # 1. 確保你有這個，它提供 RepositoryProvider, BlocListener 等
+  flutter_bloc: ^8.1.5
+
+  # 2. 確保你有這個，並確認路徑完全正確
+  #    它提供 GpxRepository, GpxStatus, GpxBloc 等
+  gpx_core:
+    path: ../../packages/gpx_core
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.2
+
+flutter:
+  uses-material-design: true
+
+    # 確保您有宣告 assets，這一步非常重要！
+  assets:
+    - assets/icon/
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/gpx_merger_app_icon.png"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/icon/gpx_merger_app_icon.png"
