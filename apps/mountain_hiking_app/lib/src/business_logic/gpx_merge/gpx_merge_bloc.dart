@@ -176,7 +176,7 @@ class GpxMergeBloc extends Bloc<GpxMergeEvent, GpxMergeState> {
         // 2. Gemini: 解析合併後的 GPX，並插入使用者定義的名稱。
         final String mergedContent = utf8.decode(mergedGpxBytes, allowMalformed: true);
         final XmlDocument document = XmlDocument.parse(mergedContent);
-        final metadata = document.rootElement?.findElements('metadata').firstOrNull;
+        final metadata = document.rootElement.findElements('metadata').firstOrNull;
 
         if (metadata != null) {
           // 移除舊的 name 標籤 (如果存在)

@@ -35,6 +35,15 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        
+        // Read .env file
+        val env = Properties()
+        val envFile = rootProject.file("../.env")
+        if (envFile.exists()) {
+            envFile.inputStream().use { env.load(it) }
+        }
+        
+        manifestPlaceholders["GOOGLE_MAPS_API_KEY"] = env.getProperty("GOOGLE_MAPS_API_KEY") ?: ""
     }
 
     // 新增 signingConfigs 區塊

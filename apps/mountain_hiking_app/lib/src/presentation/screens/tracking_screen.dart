@@ -1,6 +1,4 @@
 
-import 'dart:async';
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -112,6 +110,7 @@ class _TrackingViewState extends State<_TrackingView> {
                         ),
                       );
                     } catch (e) {
+                      if (!context.mounted) return;
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(content: Text('無法取得目前位置: $e'), backgroundColor: Colors.red),
                       );
@@ -188,7 +187,7 @@ class _TrackingViewState extends State<_TrackingView> {
                     ),
                   ),
                 );
-                if (selectedFilePath != null && mounted) {
+                if (selectedFilePath != null && context.mounted) {
                   context.read<TrackingBloc>().add(GpxFileLoaded(filePath: selectedFilePath));
                 }
               },

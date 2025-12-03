@@ -5,7 +5,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:mountain_hiking_app/src/business_logic/auth/auth_bloc.dart';
 import 'package:mountain_hiking_app/src/business_logic/social/social_bloc.dart';
 import 'package:mountain_hiking_app/src/data/models/social_post_model.dart';
-import 'package:mountain_hiking_app/src/data/services/social_api_service.dart';
 import 'package:mountain_hiking_app/src/presentation/widgets/main_scaffold.dart';
 import 'package:intl/intl.dart';
 

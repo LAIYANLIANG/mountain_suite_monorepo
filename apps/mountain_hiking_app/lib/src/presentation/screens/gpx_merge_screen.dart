@@ -9,7 +9,6 @@ import 'package:mountain_hiking_app/src/presentation/screens/gpx_planning/gpx_pl
 import 'package:mountain_hiking_app/src/presentation/widgets/app_speed_dial.dart';
 import 'package:intl/intl.dart';
 import 'package:mountain_hiking_app/generated/app_localizations.dart';
-import 'package:file_picker/file_picker.dart';
 
 class GpxMergeScreen extends StatelessWidget {
   final List<String>? initialFilePaths;

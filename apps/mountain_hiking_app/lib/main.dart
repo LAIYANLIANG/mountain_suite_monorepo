@@ -5,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:geolocator/geolocator.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'package:mountain_hiking_app/generated/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -15,9 +15,7 @@ import 'package:mountain_hiking_app/src/config/feature_flags.dart';
 import 'package:mountain_hiking_app/src/business_logic/auth/auth_bloc.dart';
 import 'package:mountain_hiking_app/src/business_logic/checklist/checklist_bloc.dart';
 import 'package:mountain_hiking_app/src/business_logic/gpx_library/gpx_library_bloc.dart';
-import 'package:mountain_hiking_app/src/business_logic/gpx_planning/gpx_planning_bloc.dart';
 import 'package:mountain_hiking_app/src/business_logic/social/social_bloc.dart';
-import 'package:mountain_hiking_app/src/business_logic/tracking/tracking_bloc.dart';
 
 import 'package:mountain_hiking_app/src/data/providers/firebase_gpx_provider.dart';
 import 'package:mountain_hiking_app/src/data/providers/local_gpx_provider.dart';
@@ -40,6 +38,7 @@ import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
 
   if (FeatureFlags.isCloudSyncEnabled) {
     await Firebase.initializeApp(
@@ -201,26 +200,41 @@ class _AppStartPageState extends State<AppStartPage> {
   /// [FIX] 調整權限請求邏輯，僅在權限尚未被授予時才發出請求。
   /// 如果權限已被永久拒絕，會顯示一個對話框引導用戶到設定頁面。
   Future<void> _requestPermissions(BuildContext context) async { // 接收 context
-    // 定義需要請求的權限列表
-    final List<Permission> permissionsToRequest = [
-      Permission.locationAlways, // 為了背景軌跡記錄
-      Permission.storage, // 為了讀寫 GPX 檔案
-    ];
+    // 1. Request Location Permissions (Foreground first, then Background)
+    // Request "When In Use" first
+    var locationStatus = await Permission.locationWhenInUse.request();
+    
+    if (locationStatus.isGranted) {
+      // If granted, try to request "Always" (Background)
+      // Note: On Android 10+, this might need to be a separate step or user action depending on strictness,
+      // but requesting it here is the standard flow for "Always" upgrades.
+      await Permission.locationAlways.request();
+    }
 
-    Map<Permission, PermissionStatus> statuses = await permissionsToRequest.request();
-
-    // 遍歷權限並檢查其狀態
-    for (var permission in permissionsToRequest) {
-      final status = await permission.status;
-      if (status.isDenied || status.isPermanentlyDenied) {
-        // 如果權限被拒絕或永久拒絕，顯示提示對話框
-        if (!mounted) continue; // 檢查 context 是否仍然有效
-        await _showPermissionDeniedDialog(
-          context,
-          '${permission.toString().split('.').last} 權限被拒絕',
-          '為了讓應用程式正常運作，需要您的 ${permission.toString().split('.').last} 權限。請在設定中開啟。'
-        );
-      }
+    // 2. Request Storage/Photos Permissions
+    // For Android 13+ (SDK 33+), Permission.storage is deprecated for media.
+    // We should check SDK version ideally, but checking the platform version in Dart is one way.
+    // However, a safer bet for file access (GPX) often involves `Permission.manageExternalStorage` (for all files)
+    // or just relying on the system picker (which doesn't need permission).
+    // For this app's "local library" feature which might scan directories, we might need storage.
+    
+    // We will request storage for older Androids.
+    // For Android 13+, if we are just using File Picker, we might not need this, 
+    // but if we are writing to a specific app folder, standard app storage doesn't need permission.
+    // If we are accessing "Shared Storage", we need it.
+    // Let's keep it simple for now and request it, but be aware it might be denied on Android 13+.
+    
+    if (Theme.of(context).platform == TargetPlatform.android) {
+       // Simple check to avoid requesting storage if not strictly needed or if it will be auto-denied.
+       // For now, we keep the request but don't block if denied, as File Picker handles most cases.
+       await Permission.storage.request();
+       
+       // For Android 13+ specific media permissions if we were handling photos/videos directly:
+       // await Permission.photos.request();
+    } else {
+       // iOS usually implies storage access via specific APIs or Photo Library
+       // We added NSPhotoLibraryUsageDescription just in case file picker needs it for some reason (rare for just files)
+       // or if we save to camera roll.
     }
   }
 

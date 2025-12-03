@@ -17,14 +17,12 @@ class GpxMergerService {
         // FIX: Decode using utf8 with allowMalformed to prevent encoding errors.
         final String content = utf8.decode(gpxFiles[i], allowMalformed: true);
         final XmlDocument document = XmlDocument.parse(content);
-        final XmlElement? root = document.rootElement;
+        final XmlElement root = document.rootElement;
         
-        if (root != null) {
-          allWpts.addAll(root.findElements('wpt'));
-          allRtes.addAll(root.findElements('rte'));
-          allTrks.addAll(root.findElements('trk'));
-        }
-      } catch (e) {
+        allWpts.addAll(root.findElements('wpt'));
+        allRtes.addAll(root.findElements('rte'));
+        allTrks.addAll(root.findElements('trk'));
+            } catch (e) {
         print('解析第 ${i + 1} 個檔案時發生錯誤: $e');
       }
     }

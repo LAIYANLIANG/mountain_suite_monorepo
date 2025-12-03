@@ -2,7 +2,7 @@
 part of 'gpx_library_bloc.dart';
 
 /// GPX 地圖庫的狀態枚舉
-enum GpxLibraryStatus { initial, loading, loaded, empty, error }
+enum GpxLibraryStatus { initial, loading, loaded, empty, error, success, idle }
 
 /// V1.0 - GPX 地圖庫功能的狀態類別。
 class GpxLibraryState extends Equatable {
@@ -15,24 +15,30 @@ class GpxLibraryState extends Equatable {
   /// 當 status 為 'error' 時，儲存錯誤訊息。
   final String? errorMessage;
 
+  /// 當 status 為 'success' 時，可選的成功訊息。
+  final String? successMessage;
+
   const GpxLibraryState({
     this.status = GpxLibraryStatus.initial,
     this.files = const [],
     this.errorMessage,
+    this.successMessage,
   });
 
   GpxLibraryState copyWith({
     GpxLibraryStatus? status,
     List<GpxLibraryItem>? files,
     String? errorMessage,
+    String? successMessage,
   }) {
     return GpxLibraryState(
       status: status ?? this.status,
       files: files ?? this.files,
       errorMessage: errorMessage ?? this.errorMessage,
+      successMessage: successMessage ?? this.successMessage,
     );
   }
 
   @override
-  List<Object?> get props => [status, files, errorMessage];
+  List<Object?> get props => [status, files, errorMessage, successMessage];
 }

@@ -3,13 +3,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mountain_hiking_app/src/config/feature_flags.dart';
 import 'package:mountain_hiking_app/src/presentation/screens/gpx_planning/gpx_planning_screen.dart';
 import 'package:mountain_hiking_app/src/presentation/screens/tracking_screen.dart'; // Import TrackRecordingScreen
-import 'package:mountain_hiking_app/src/presentation/screens/gpx_library_screen.dart'; // Import GpxLibraryScreen
-import 'package:file_picker/file_picker.dart'; // Import FilePicker
+// Import GpxLibraryScreen
+// Import FilePicker
 import 'package:mountain_hiking_app/src/presentation/screens/auth_screen.dart';
 import 'package:mountain_hiking_app/src/presentation/widgets/main_scaffold.dart';
 import 'package:mountain_hiking_app/generated/app_localizations.dart';
 import 'package:mountain_hiking_app/src/business_logic/auth/auth_bloc.dart'; // Import AuthBloc
-import 'package:mountain_hiking_app/src/business_logic/auth/auth_state.dart'; // Import AuthState
+// Import AuthState
 import 'package:mountain_hiking_app/src/business_logic/gpx_library/gpx_library_bloc.dart';
 import 'package:mountain_hiking_app/src/business_logic/gpx_planning/gpx_planning_bloc.dart';
 import 'package:permission_handler/permission_handler.dart';

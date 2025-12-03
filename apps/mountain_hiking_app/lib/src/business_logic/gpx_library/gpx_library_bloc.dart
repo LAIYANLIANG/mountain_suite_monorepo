@@ -9,11 +9,12 @@ import 'package:file_saver/file_saver.dart';
 import 'package:meta/meta.dart';
 import 'package:mountain_hiking_app/src/data/models/gpx_library_item.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:xml/xml.dart';
+import 'package:path/path.dart' as p;
 
 part 'gpx_library_event.dart';
 part 'gpx_library_state.dart';
+
 
 /// V1.0 - GPX 地圖庫功能的業務邏輯核心 (BLoC)。
 ///
@@ -132,28 +133,34 @@ class GpxLibraryBloc extends Bloc<GpxLibraryEvent, GpxLibraryState> {
     FileDownloaded event,
     Emitter<GpxLibraryState> emit,
   ) async {
-    // Gemini-Fix: Removed the manual permission check for `Permission.storage`.
-    // The `file_saver` package is designed to handle file saving through the
-    // system's own UI, which implicitly handles permissions. The old check
-    // can cause issues on newer Android versions where `Permission.storage`
-    // is deprecated or restricted.
     try {
+      // 1. 從私有路徑讀取檔案
       final file = File(event.filePath);
       final bytes = await file.readAsBytes();
-      final fileName = event.filePath.split('/').last;
 
-      // Let file_saver handle the platform-specific saving mechanism.
-      // It will open a system dialog for the user to pick a location and save the file.
-      await FileSaver.instance.saveFile(
+      // 2. 獲取原始檔案名稱
+      final String fileName = p.basename(event.filePath); 
+
+      // 3. 呼叫 FileSaver 將 bytes 儲存
+      final String savedPath = await FileSaver.instance.saveFile(
         name: fileName,
         bytes: bytes,
-        mimeType: MimeType.other, // Using a generic MIME type for GPX files.
+        mimeType: MimeType.custom,
+        customMimeType: 'application/gpx+xml',
       );
-      // Consider emitting a success state here to show a confirmation message in the UI.
+
+      // 儲存成功
+      emit(state.copyWith(
+        status: GpxLibraryStatus.success, 
+        successMessage: '檔案已儲存至 $savedPath',
+      ));
+    
     } catch (e) {
-      // If the user cancels the file picker, it might throw an exception.
-      // Also, other file-related errors can be caught here.
-      emit(state.copyWith(status: GpxLibraryStatus.error, errorMessage: '檔案下載失敗: ${e.toString()}'));
+      // 4. 處理任何可能的錯誤
+      emit(state.copyWith(
+        status: GpxLibraryStatus.error, 
+        errorMessage: '儲存檔案時發生錯誤：${e.toString()}',
+      ));
     }
   }
 

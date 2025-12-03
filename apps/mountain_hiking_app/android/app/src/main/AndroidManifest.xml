@@ -6,9 +6,6 @@
    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
    <!-- 啟用前景服務，用於持續的背景定位 -->
    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-   <!-- 讀寫 GPX 檔案到外部儲存空間 -->
-   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:label="mountain_hiking_app"
@@ -42,7 +39,7 @@
             android:name="flutterEmbedding"
             android:value="2" />
             <!-- <meta-data android:name="com.google.android.geo.API_KEY" android:value="REDACTED_GOOGLE_MAPS_API_KEY"/> -->
-         <meta-data android:name="com.google.android.geo.API_KEY" android:value="REDACTED_GOOGLE_MAPS_API_KEY"/>
+         <meta-data android:name="com.google.android.geo.API_KEY" android:value="${GOOGLE_MAPS_API_KEY}"/>
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and

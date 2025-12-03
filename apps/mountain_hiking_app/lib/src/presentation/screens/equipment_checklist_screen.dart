@@ -42,8 +42,12 @@ class _EquipmentChecklistViewState extends State<_EquipmentChecklistView> with T
   @override
   void dispose() {
     _tabController.dispose();
-    _focusNodes.values.forEach((node) => node.dispose());
-    _controllers.values.forEach((controller) => controller.dispose());
+    for (var node in _focusNodes.values) {
+      node.dispose();
+    }
+    for (var controller in _controllers.values) {
+      controller.dispose();
+    }
     super.dispose();
   }
 

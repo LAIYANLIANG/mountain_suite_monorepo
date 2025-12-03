@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
@@ -82,11 +81,20 @@ class _GpxListView extends StatelessWidget {
       ),
       body: BlocConsumer<GpxLibraryBloc, GpxLibraryState>(
         listener: (context, state) {
-          // 監聽錯誤狀態並顯示 SnackBar
+          // 監聽各種狀態並顯示 SnackBar
           if (state.status == GpxLibraryStatus.error && state.errorMessage != null) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text(state.errorMessage!), backgroundColor: Colors.red),
             );
+          } else if (state.status == GpxLibraryStatus.success && state.successMessage != null) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text(state.successMessage!), backgroundColor: Colors.green),
+            );
+          } else if (state.status == GpxLibraryStatus.idle) {
+            // 可選：如果需要，可以為取消操作提供反饋
+            // ScaffoldMessenger.of(context).showSnackBar(
+            //   const SnackBar(content: Text('操作已取消'), backgroundColor: Colors.grey),
+            // );
           }
         },
         builder: (context, state) {
@@ -168,9 +176,6 @@ class _GpxListView extends StatelessWidget {
           tooltip: '匯出至下載資料夾',
           onPressed: () {
             context.read<GpxLibraryBloc>().add(FileDownloaded(filePath: item.filePath));
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text('正在將 "${item.displayName}" 儲存至下載資料夾...'), backgroundColor: Colors.blue),
-            );
           },
         ),
         IconButton(

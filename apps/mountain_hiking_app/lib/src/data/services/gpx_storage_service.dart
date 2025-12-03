@@ -111,9 +111,7 @@ CREATE TABLE $_tableName (
   Map<String, dynamic> _parseGpxData(Uint8List gpxBytes, String fallbackName) {
     final String content = utf8.decode(gpxBytes);
     final XmlDocument document = XmlDocument.parse(content);
-    final XmlElement? root = document.rootElement;
-
-    if (root == null) throw Exception("Invalid GPX file");
+    final XmlElement root = document.rootElement;
 
     String name = root.findElements('metadata').firstOrNull?.findElements('name').firstOrNull?.innerText ?? fallbackName;
     DateTime date = DateTime.now();

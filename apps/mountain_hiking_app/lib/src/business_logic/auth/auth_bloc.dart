@@ -3,7 +3,6 @@ import 'package:meta/meta.dart';
 import 'package:mountain_hiking_app/src/data/repositories/auth/auth_repository.dart';
 
 import 'package:mountain_hiking_app/src/business_logic/auth/auth_state.dart';
-import 'package:meta/meta.dart';
 
 export 'auth_state.dart'; // Export AuthState and its subclasses
 part 'auth_event.dart';
@@ -92,7 +91,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<RegisterRequested>((event, emit) async {
       emit(AuthLoading());
       try {
-        final userId = await _authRepository.register(
+        await _authRepository.register(
           email: event.email,
           password: event.password,
           accountName: event.accountName,

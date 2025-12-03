@@ -116,7 +116,7 @@ class _RouteEvaluationScreenState extends State<RouteEvaluationScreen> {
                   avgTime: entry.value['avg'],
                   controller: entry.value['controller'],
                 );
-              }).toList(),
+              }),
               const SizedBox(height: 20),
               _buildBreathlessnessInput(), // Interactive dropdown
               const SizedBox(height: 20),
@@ -183,7 +183,7 @@ class _RouteEvaluationScreenState extends State<RouteEvaluationScreen> {
         ),
         const SizedBox(height: 8),
         DropdownButtonFormField<int>(
-          value: _breathlessnessLevel,
+          initialValue: _breathlessnessLevel,
           items: const [
             DropdownMenuItem(value: 1, child: Text('1 - 沒感覺')),
             DropdownMenuItem(value: 2, child: Text('2 - 有點喘')),

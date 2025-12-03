@@ -111,9 +111,7 @@ class FirebaseGpxProvider implements GpxDataProvider {
      try {
       final String content = utf8.decode(gpxBytes, allowMalformed: true);
       final XmlDocument document = XmlDocument.parse(content);
-      final XmlElement? root = document.rootElement;
-
-      if (root == null) throw Exception("Invalid GPX file");
+      final XmlElement root = document.rootElement;
 
       String name = root.findElements('metadata').firstOrNull?.findElements('name').firstOrNull?.innerText ??
                     root.findElements('trk').firstOrNull?.findElements('name').firstOrNull?.innerText ??

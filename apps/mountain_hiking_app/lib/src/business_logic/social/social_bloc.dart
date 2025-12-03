@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'package:bloc/bloc.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:meta/meta.dart';
 import 'package:mountain_hiking_app/src/business_logic/auth/auth_bloc.dart';
 import 'package:mountain_hiking_app/src/data/models/social_post_model.dart';
