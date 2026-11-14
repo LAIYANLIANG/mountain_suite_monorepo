@@ -1,0 +1,29 @@
+# OS & Editor
+.DS_Store
+.idea/
+*.swp
+*.swo
+
+# Logs & Crash dumps
+*.log
+*_log.txt
+
+# Secrets & Environment Variables
+.env
+.env.*
+!.env.example
+
+# Signing & Keystores
+key.properties
+*.jks
+*.keystore
+
+# Firebase Platform Configs (keep *.example templates tracked)
+google-services.json
+GoogleService-Info.plist
+
+# Build & Tooling Artifacts
+**/build/
+.dart_tool/
+.pub-cache/
+.pub/

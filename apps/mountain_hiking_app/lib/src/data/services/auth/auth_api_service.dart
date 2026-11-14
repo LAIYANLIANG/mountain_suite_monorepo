@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart' as firebase;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:mountain_hiking_app/src/data/repositories/auth/auth_repository.dart';
 
@@ -13,8 +14,13 @@ class AuthApiService implements AuthRepository {
     firebase.FirebaseAuth? firebaseAuth,
     GoogleSignIn? googleSignIn,
   }) : _firebaseAuth = firebaseAuth ?? firebase.FirebaseAuth.instance,
-       //_googleSignIn = googleSignIn ?? GoogleSignIn(serverClientId: 'REDACTED_GOOGLE_MAPS_API_KEY');
-        _googleSignIn = googleSignIn ?? GoogleSignIn(serverClientId: 'REDACTED_GOOGLE_OAUTH_CLIENT_ID');
+       _googleSignIn =
+           googleSignIn ??
+           GoogleSignIn(
+             serverClientId: dotenv.isInitialized
+                 ? dotenv.maybeGet('GOOGLE_SERVER_CLIENT_ID')
+                 : null,
+           );
 
   @override
   Future<String?> getCurrentUser() async {
